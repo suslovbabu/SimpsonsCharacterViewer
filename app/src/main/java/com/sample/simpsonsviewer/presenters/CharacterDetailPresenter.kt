@@ -7,6 +7,7 @@ class CharacterDetailPresenter(private val view: CharacterDetailContract.View, p
     override fun onViewCreated() {
         view.setTitle(character.getCharacterName())
         view.setDescription(character.result ?: "")
+        view.setMovementMethodForDescription()
         val url = character.icon?.url
         if (!url.isNullOrBlank()) {
             view.setImageUrl(url)

@@ -1,6 +1,7 @@
 package com.sample.simpsonsviewer.fragments
 
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -63,6 +64,10 @@ class CharacterDetailFragment : Fragment(), CharacterDetailContract.View {
 
     override fun setDescription(description: String) {
         root.characterDescriptionTextView.text = HtmlCompat.fromHtml(description, HtmlCompat.FROM_HTML_MODE_LEGACY)
+    }
+
+    override fun setMovementMethodForDescription() {
+        root.characterDescriptionTextView.movementMethod = LinkMovementMethod.getInstance()
     }
 
     override fun setImageUrl(url: String) {

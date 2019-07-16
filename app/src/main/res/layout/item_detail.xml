@@ -28,6 +28,5 @@
             app:layout_constraintTop_toBottomOf="@+id/characterImageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-
-    />
+            android:linksClickable="true"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
